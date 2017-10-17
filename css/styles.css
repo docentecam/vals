@@ -40,6 +40,9 @@
 	font-family: 'Open Sans', sans-serif;
 }
 
+body{
+    padding: 15px;
+}
 #prueba{
     width: 276px;
     height: 300px;

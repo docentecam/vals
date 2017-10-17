@@ -1,6 +1,6 @@
 angular.module('spaApp')															 
 .controller('PromotionsCtrl', function($scope, $http) {
-
+	$scope.textProva="Texte del controler";
 /*$http({
 		method : "GET",
 		url : "models/links.php?acc=links"
