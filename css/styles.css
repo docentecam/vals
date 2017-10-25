@@ -34,7 +34,7 @@
     color:#faff00;
 }
 /*FIN BLOQUE COOKIES*/
-/*--------------------------------------------------------Aida--------------------------------------------------------------------*/
+
 *
 {
 	font-family: 'Open Sans', sans-serif;
@@ -51,6 +51,11 @@ body{
  margin-top: 5%;
  color: white;
  margin-left: 4%;
+}
+
+#categories
+{
+    background-color: #f0f1f1!important;
 }
 
 #footerDiv

@@ -1,14 +1,14 @@
-
-<br>1- Incloure el JS al index <!--<script src="controllers/promotions.js"></script>-->
-<br>2- Crear aquest js, amb el controller que cridarem desde app.js
-<!-- angular.module('spaApp')															 
-.controller('PromotionsCtrl', function($scope, $http) {
-	$scope.textProva="Texte del controler";
-
-});		 -->
-<br>3- Crear la vista que cridarem desde el app.js.<!--  {{textProva}} -->
-<br>4- Al app.js, farem la crida al controller i la vista que mostrarem, segons els paràmetres de la url.
-<!-- .when('/', {
-        templateUrl: 'views/inicio.html',
-        controller: 'PromotionsCtrl',
-    }) -->
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-lg-2">
+			<label id="categories" class="col-lg-12">
+			Selecciona la categoria:
+		</label>
+		</div>
+		<div class="col-lg-10">
+			<img src="img/categoria1.png" alt="categoria1" class="col-lg-4">
+			<img src="img/categoria2.png" alt="categoria2" class="col-lg-4">
+			<img src="img/categoria3.png" alt="categoria3" class="col-lg-4">
+		</div>
+	</div>
+</div>
