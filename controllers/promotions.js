@@ -1,13 +1,19 @@
 angular.module('spaApp')
 .controller('PromotionsCtrl', function($scope, $http) {
-	$scope.textProva="Texte del controler";
-/*$http({
+	$scope.loading=true;
+
+$http({
 		method : "GET",
-		url : "models/links.php?acc=links"
+		url : "models/promotions.php?acc=l"
 	}).then(function mySucces (response) {
-		$scope.links=response.data;
+		$scope.promos=response.data;
 	}, function myError (response) {
-		$scope.links = response.statusText;
+		$scope.promos = response.statusText;
+	})
+	.finally (function(){
+		$scope.loading=false;
+		
 	});
-	*/
-});		
+	console.log($scope.promos);
+	console.log("Prueba");
+});
