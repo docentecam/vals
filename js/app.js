@@ -6,13 +6,6 @@ app.config(['$routeProvider', function ($routeProvider) {
         controller: 'PromotionsCtrl',
     })
 
-	/*.when('/news/:idUser',{
-	templateUrl:'views/news.html',
-	controller:'NewsCtrl',
-
-	})*/
-	
-
     // .otherwise({
     //     redirectTo: '/'
     // });
