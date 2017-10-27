@@ -30,24 +30,26 @@
 				</label>
 			</div>	
 		</div>
-		<div class="col-lg-4" ng-repeat="promo in promos">
-			<a href="" ng-click="searchOffer(promo.idPromo);">
-				<img ng-src="img/{{promo.image}}" alt="categoria3" class="img-responsive">
-			</a>
-			<label class="date">
-				Data de caducitat {{promo.dataExpire}}
-			</label>
-			<div class="">
-				<label class="col-lg-12 titleOffer">
-					{{promo.offer}}
+		<div class="col-lg-10">
+			<div class="col-lg-4 promosAll" ng-repeat="promo in promos">
+				<a href="" ng-click="searchOffer(promo.idPromo);">
+					<img ng-src="img/{{promo.image}}" alt="categoria3" class="img-responsive imgCat">
+				</a>
+				<label class="date">
+					Data de caducitat {{promo.dataExpire}}
 				</label>
+				<div class="">
+					<label class="titleOffer">
+						{{promo.offer}}
+					</label>
+				</div>
+				<div class="">
+					<label class="">
+						{{promo.nameShop}}
+					</label>
+				</div>							
 			</div>
-			<div class="">
-				<label class="col-lg-12">
-					{{promo.nameShop}}
-				</label>
-			</div>							
-		</div>
+		</div>	
 	</div>
 	<div ng-hide="list">
 		<div class="row">
@@ -56,13 +58,15 @@
 			</div>
 			<div class="col-lg-10 col-lg-offset-1">
 				<div class="col-lg-5">
-					<label class="col-lg-12 titleOffer">
+					<label class="titleOffer">
 						{{promoSel[0].nameShop}}
 					</label>
-					<label class="col-lg-12">
-						{{promoSel[0].offer}}
-					</label>
-					<img ng-src="img/{{promoSel[0].image}}" alt="categoria3" class="img-responsive col-lg-12">
+					<div class="row">
+						<label class="col-lg-12">
+							{{promoSel[0].offer}}
+						</label>	
+					</div>
+					<img ng-src="img/{{promoSel[0].image}}" alt="categoria3" class="img-responsive">
 					<label class="date col-lg-12">
 						Data de caducitat {{promoSel[0].dataExpire}}
 					</label>
@@ -86,6 +90,4 @@
 			</div>
 		</div>
 	</div>
-</div> 	
-</div>
-</div>
+</div> 
