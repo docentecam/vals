@@ -125,10 +125,10 @@ a:hover
     padding-left: 4%;
 }
 
-#icoGps
-{
-    padding-right: 1%;
+.fa-map-marker {
+    padding-right: 2%;
 }
+
 .imgPromoSel
 {
     z-index: 1;
