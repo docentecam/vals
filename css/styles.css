@@ -139,10 +139,26 @@ a:hover
     margin-bottom: 5%!important;
 }
 
+.titleOfferPromo
+{
+    font-weight: 600!important;
+    font-size: 16px!important;
+}
+
 #footerDiv
 {   
     height: 100px;
     background-color: #2a4357;
+}
+
+.condPromo
+{
+    margin-top: 10%!important;
+}
+
+.shopName
+{
+    padding-bottom: 2%!important;
 }
 
 #txtFooter
