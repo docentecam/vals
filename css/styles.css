@@ -81,13 +81,17 @@ body
 .titleOffer
 {
     font-weight: 600!important;
+    padding: 0;
+    margin-left: -3.1%;
 }
 
 .date
 {
     font-size: 12px;
     color: #969797; 
+    padding-bottom: 0.5%;
 }
+
 
 a
 {
@@ -107,14 +111,14 @@ a:hover
 .imgOpa
 {
     background-color: #A8A9AB;
-    width: 100%;
     z-index: 2;
     height: 40px;
     opacity: 0.5;
     position: absolute;
-    top: 79%;
-    width: 93.8%;
+    bottom: 0%;
+    width: 100%;
     vertical-align: middle;
+    padding: 0%;
 }
 
 .addressImg
@@ -134,6 +138,18 @@ a:hover
     z-index: 1;
 }
 
+.imgPadd
+{
+    padding: 0!important;
+}
+
+.infoPromo
+{
+    margin-left: 8.5%;
+    margin-top: 1%;
+    padding-bottom: 4%;
+}
+
 .promosAll
 {
     margin-bottom: 5%!important;
@@ -143,6 +159,8 @@ a:hover
 {
     font-weight: 600!important;
     font-size: 16px!important;
+    margin-top: 10%!important;
+    padding: 0;
 }
 
 #footerDiv
@@ -154,59 +172,92 @@ a:hover
 .condPromo
 {
     margin-top: 10%!important;
+    margin-left: 2%;
 }
 
-.shopName
+.offerPromo
 {
     padding-bottom: 2%!important;
+    padding: 0;
 }
 
-#txtFooter
+.breadCrumb
 {
-    color: white;
-    position: relative;
-    right: 5%;
-    top: 32%;
+    padding-bottom: 3%!important;
+}
+
+hr.style14 
+{ 
+    width: 80%;
+    border: 0; 
+    height: 1px; 
+    background-image: -webkit-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+    background-image: -moz-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+    background-image: -ms-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+    background-image: -o-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0); 
+}
+
+.imgBotiga
+{
+    margin-top: 2%!important;
+}
+
+.condPromoBotiga
+{
+    margin-top: 1%;
+}
+
+.descBotiga
+{
+    font-size: 15px;
+    text-align: center;
+}
+
+.descBotigaBold
+{
+   font-weight: 600!important;
+   margin-top: 10%;
+}
+
+.logoAjuntament
+{
+    margin-top: 4%!important;
+}
+
+.descShop
+{
+    margin-top: 10%!important;
 }
 
 /*Extra small devices (portrait phones, less than 576px)*/
 @media (min-width: 320px) { 
     #headerTitle
-{
- font-size: 16px;
-}  
-#txtFooter
-{
+    {
+     font-size: 16px;
+ }  
+ #txtFooter
+ {
     font-size: 12px;
 }
 }
 
 /*Small devices (landscape phones, less than 768px)*/
 @media (min-width: 768px) {    #headerTitle
-{
- font-size: 18px;
-} 
-#txtFooter
-{
-    font-size: 14px;
-}   }
+    {
+     font-size: 18px;
+ } 
+}
 
 /*Medium devices (tablets, less than 992px)*/
 @media (min-width: 992px) {   #headerTitle
-{
- font-size: 18px;
-}  
-#txtFooter
-{
-    font-size: 16px;
-}  }
+    {
+     font-size: 18px;
+ }  
+}
 
 /*Large devices (desktops, less than 1200px)*/
 @media (min-width: 1200px) {    #headerTitle
-{
- font-size: 20px;
-}   
-#txtFooter
-{
-    font-size: 18px;
-} }
+    {
+     font-size: 20px;
+ }   
+}

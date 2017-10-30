@@ -43,7 +43,7 @@
 						{{promo.offer}}
 					</label>
 				</div>
-				<div class="shopName">
+				<div class="">
 					<label class="">
 						{{promo.nameShop}}
 					</label>
@@ -53,7 +53,7 @@
 	</div>
 	<div ng-hide="list">
 		<div class="row">
-			<div>
+			<div class="breadCrumb col-lg-12 ">
 				Inici | Ofertes
 			</div>
 			<div class="col-lg-10 col-lg-offset-1">
@@ -62,47 +62,61 @@
 						{{promoSel[0].nameShop}}
 					</label>
 					<div class="row">
-						<label class="col-lg-12">
+						<label class="col-lg-12 offerPromo">
 							{{promoSel[0].offer}}
 						</label>	
 					</div>
-					<img ng-src="img/{{promoSel[0].image}}" alt="categoria3" class="img-responsive imgPromoSel">
-					<div class="imgOpa">
-						<label class="addressImg col-lg-12">
-							<i class="fa fa-map-marker" id="icoGps" aria-hidden="true"></i>Carrer {{promoSel[0].address}}
-						</label>
-					</div>
 					<div class="row">
-						<label class="date col-lg-12">
-							Data de caducitat {{promoSel[0].dataExpire}}
-						</label>
-					</div>
-					<div class="row">
-						<label class="date col-lg-12">
-							Telèfon {{promoSel[0].phone}}
-						</label>
-					</div>
-					<div class="row">
-						<label class="date col-lg-12">
-							{{promoSel[0].mail}}
-						</label>
+						<div class="imgOpa col-lg-12">
+							<label class="addressImg col-lg-12">
+								<i class="fa fa-map-marker" id="icoGps" aria-hidden="true"></i>Carrer {{promoSel[0].address}}
+							</label>
+						</div>
+						<div class="col-lg-12 imgPadd">
+							<img ng-src="img/{{promoSel[0].image}}" alt="categoria3" class="img-responsive imgPromoSel">	
+						</div>						
 					</div>
 				</div>
 				<div class="col-lg-5 condPromo">
 					<label class="col-lg-12 titleOfferPromo">
 						Oferta
 					</label>
-					<p class="col-lg-12">
+					<p class="col-lg-12s">
 						{{promoSel[0].conditions}}
 					</p>
 				</div>
 			</div>
 		</div>
+		<div class="row infoPromo">
+			<div class="row">
+				<label class="date col-lg-4">
+					Data de caducitat {{promoSel[0].dataExpire}}
+				</label>
+			</div>
+			<div class="row">
+				<label class="date col-lg-4">
+					Telèfon {{promoSel[0].phone}}
+				</label>
+			</div>
+			<div class="row">
+				<label class="date col-lg-4">
+					{{promoSel[0].mail}}
+				</label>
+			</div>
+		</div>
+		<hr class="style14">
 		<div class="row">
 			<div class="col-lg-12">
-				<img ng-src="img/{{promoSel[0].logo}}" alt="logoComerç" class="col-lg-6">
+				<div class="col-lg-5 col-lg-push-2 imgBotiga">
+					<img ng-src="img/{{promoSel[0].logo}}" alt="logoComerç" class="col-lg-6 img-responsive ">
+				</div>
+				<div class="descBotiga col-lg-5">
+					<p class="descBotigaBold">
+						Descripció de la empresa:
+					</p>
+				</div>
 				<div class="col-lg-6">
-					<p class="">
+					<p class="condPromoBotiga">
 						{{promoSel[0].descriptionLong}}
 					</p>
 				</div>
