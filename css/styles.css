@@ -50,11 +50,11 @@ body
 
 #headerTitle
 {
- position: absolute;
- top: 0%;
- margin-top: 5%;
- color: white;
- margin-left: 4%;
+   position: absolute;
+   top: 0%;
+   margin-top: 5%;
+   color: white;
+   margin-left: 4%;
 }
 
 .content
@@ -224,8 +224,8 @@ hr.style14
 
 .descShopBold
 {
-   font-weight: 600!important;
-   margin-top: 10%;
+ font-weight: 600!important;
+ margin-top: 10%;
 }
 
 .logoAjuntament
@@ -242,10 +242,10 @@ hr.style14
 @media (min-width: 320px) { 
     #headerTitle
     {
-     font-size: 16px;
- }  
- .subCat
- {
+       font-size: 16px;
+   }  
+   .subCat
+   {
     padding-bottom: 1%;
     font-weight: 600!important;
 }
@@ -253,17 +253,26 @@ hr.style14
 {
     margin-bottom: 2%;
 }
-
+.descShopBold
+{
+ font-weight: 600!important;
+ margin-top: 0;
+}
+.imgLogo
+{
+    padding-right: 5%;
+    margin-top: 8%;
+}
 }
 
 /*Small devices (landscape phones, less than 768px)*/
 @media (min-width: 768px) {    
     #headerTitle
     {
-     font-size: 18px;
- } 
- .subCat
- {
+       font-size: 18px;
+   } 
+   .subCat
+   {
     padding-bottom: 1%;
     font-weight: 600!important;
 }
@@ -277,10 +286,10 @@ hr.style14
 @media (min-width: 992px) {   
     #headerTitle
     {
-     font-size: 18px;
- } 
- .subCat
- {
+       font-size: 18px;
+   } 
+   .subCat
+   {
     padding-bottom: 1%;
     font-weight: 600!important;
 }
@@ -294,10 +303,10 @@ hr.style14
 @media (min-width: 1200px) {    
     #headerTitle
     {
-     font-size: 20px;
- } 
- #categories
-{
+       font-size: 20px;
+   } 
+   #categories
+   {
     margin-bottom: 10%;
 }
 }

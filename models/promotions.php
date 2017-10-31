@@ -70,15 +70,23 @@ if(isset($_GET['acc']) && ($_GET['acc']=='s')){
 }
 
 if(isset($_GET['acc']) && ($_GET['acc']=='f')){
-	$mySql = "SELECT p.idPromotion, p.image, date_format(p.dataExpireVals,'%d/%m/%y') as dataExpireVals, p.oferVals, s.name FROM promotions p, shops s WHERE s.idShop = p.idShop ORDER BY p.dataExpireVals";
+	$idCategory=$_GET['idCategory'];
+	$mySql = "SELECT promotions.idPromotion, promotions.image, date_format(promotions.dataExpireVals,'%d/%m/%y') as dataExpireVals, promotions.oferVals, shops.name
+	FROM categories
+	LEFT JOIN categoriessub ON categoriessub.idCategory = categories.idCategory
+	LEFT JOIN shopcategoriessub ON shopcategoriessub.idSubCategory = categoriessub.idSubCategory
+	LEFT JOIN shops ON shopcategoriessub.idShop = shops.idShop
+	LEFT JOIN promotions ON promotions.idShop = shops.idShop
+	WHERE categories.idCategory =".$idCategory;
+
 	$connexio = connect();
 	$resultFilterCat = mysqli_query($connexio, $mySql);
 	disconnect($connexio);
 
-	$dadesFilter = mySqli_fetch_row($resultFilterCat);
+	//$dadesFilter = mySqli_fetch_row($resultFilterCat);
 	$dades = "[";
 	$i = 0;
-	while ($row=mySqli_fetch_array($dadesFilter))
+	while ($row=mySqli_fetch_array($resultFilterCat))
 	{
 		if($i!=0) 
 		{
