@@ -82,7 +82,11 @@ body
 {
     font-weight: 600!important;
     padding: 0;
-    margin-left: -3.1%;
+}
+
+#shopMargin
+{
+    margin-left: -3.5%!important;
 }
 
 .date
@@ -92,6 +96,11 @@ body
     padding-bottom: 0.5%;
 }
 
+.pictoImg
+{
+    padding-right: 5%!important;
+    margin-top: -2.5%;
+}
 
 a
 {
@@ -197,23 +206,23 @@ hr.style14
     background-image: -o-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0); 
 }
 
-.imgBotiga
+.imgShop
 {
     margin-top: 2%!important;
 }
 
-.condPromoBotiga
+.condPromoShop
 {
     margin-top: 1%;
 }
 
-.descBotiga
+.descShopSel
 {
     font-size: 15px;
     text-align: center;
 }
 
-.descBotigaBold
+.descShopBold
 {
    font-weight: 600!important;
    margin-top: 10%;
@@ -235,29 +244,60 @@ hr.style14
     {
      font-size: 16px;
  }  
- #txtFooter
+ .subCat
  {
-    font-size: 12px;
+    padding-bottom: 1%;
+    font-weight: 600!important;
 }
+#categories
+{
+    margin-bottom: 2%;
+}
+
 }
 
 /*Small devices (landscape phones, less than 768px)*/
-@media (min-width: 768px) {    #headerTitle
+@media (min-width: 768px) {    
+    #headerTitle
     {
      font-size: 18px;
  } 
+ .subCat
+ {
+    padding-bottom: 1%;
+    font-weight: 600!important;
+}
+#categories
+{
+    margin-bottom: 5%;
+}
 }
 
 /*Medium devices (tablets, less than 992px)*/
-@media (min-width: 992px) {   #headerTitle
+@media (min-width: 992px) {   
+    #headerTitle
     {
      font-size: 18px;
- }  
+ } 
+ .subCat
+ {
+    padding-bottom: 1%;
+    font-weight: 600!important;
+}
+#categories
+{
+    margin-bottom: 5%;
+}
 }
 
 /*Large devices (desktops, less than 1200px)*/
-@media (min-width: 1200px) {    #headerTitle
+@media (min-width: 1200px) {    
+    #headerTitle
     {
      font-size: 20px;
- }   
+ } 
+ #categories
+{
+    margin-bottom: 10%;
+}
 }

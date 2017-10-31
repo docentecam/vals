@@ -7,14 +7,37 @@ angular.module('spaApp')
 		method : "GET",
 		url : "models/promotions.php?acc=l"
 	}).then(function mySucces (response) {
-		$scope.promos=response.data;
+		$scope.data=response.data;
+		$scope.promos=$scope.data[0].promotions;
+		$scope.filters=$scope.data[0].filters;
+		$scope.web=$scope.data[0].web[0].urlWeb;
 		console.log($scope.promos);
+		console.log($scope.data[0].web[0].urlWeb);
 	}, function myError (response) {
-		$scope.promos = response.statusText;
+		$scope.data = response.statusText;
 	})
 	.finally (function(){
 		$scope.loading=false;
 	});
+
+	$scope.filterCat = function(idCategory)
+	{
+		console.log (idCategory);
+				$http({
+			method : "GET",
+			url : "models/promotions.php?acc=f&idCategory=" + idCategory
+		}).then(function mySucces (response) {
+			$scope.promos=response.data;
+			console.log($scope.promos);
+			$scope.list = false;
+		}, function myError (response) {
+			$scope.promos = response.statusText;
+		})
+		.finally (function(){
+			$scope.loading=false;
+		});
+
+	}
 
 	$scope.searchOffer = function(idPromo)
 	{
