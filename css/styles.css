@@ -25,13 +25,13 @@
 }
 .inner a.ok {
     padding:4px;
-    color:#00ff2e;
+    color:#fff;
     text-decoration:none;
 }
 .inner a.info {
     padding-left:5px;
     text-decoration:none;
-    color:#faff00;
+    color:#fff;
 }
 /*FIN BLOQUE COOKIES*/
 
@@ -160,7 +160,6 @@ a:hover
 
 .infoPromo
 {
-    margin-left: 8.5%;
     margin-top: 1%;
     padding-bottom: 4%;
 }
@@ -274,6 +273,13 @@ hr.style14
     padding-right: 5%;
     margin-top: 8%;
 }
+
+.condPromo
+{
+    margin-top: 0%!important;
+    margin-left: 2%;
+}
+
 }
 
 @media (min-width: 320px) and (max-width: 479px) {    
@@ -283,6 +289,10 @@ hr.style14
     margin-top: -0.5%;
     width: 14%;  
 } 
+.infoPromo
+{
+    margin-left: 6%;
+}
 
 }
 
@@ -293,6 +303,10 @@ hr.style14
     margin-top: -0.5%;
     width: 12%;  
 } 
+.infoPromo
+{
+    margin-left: 5%;
+}
 
 }
 
@@ -303,6 +317,10 @@ hr.style14
     margin-top: -0.5%;
     width: 11%;  
 } 
+.infoPromo
+{
+    margin-left: 5%;
+}
 
 }
 
@@ -320,6 +338,10 @@ hr.style14
 #categories
 {
     margin-bottom: 10%;
+}
+.infoPromo
+{
+    margin-left: 8.5%;
 }
 }
 
@@ -369,5 +391,9 @@ hr.style14
    #categories
    {
     margin-bottom: 10%;
+}
+.infoPromo
+{
+    margin-left: 8.5%;
 }
 }
