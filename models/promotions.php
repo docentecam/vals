@@ -3,7 +3,8 @@ require('../inc/functions.php');
 
 if(isset($_GET['acc']) && ($_GET['acc']=='l')){
 
-	$mySqlPromotions = "SELECT p.idPromotion, p.image, date_format(p.dataExpireVals,'%d/%m/%y') as dataExpireVals, p.oferVals, s.name FROM promotions p, shops s WHERE s.idShop = p.idShop ORDER BY p.dataExpireVals";
+	$mySqlPromotions = "SELECT p.idPromotion, p.image, date_format(p.dataExpireVals,'%d/%m/%y') as dataExpireValsE, p.oferVals, s.name FROM promotions p, shops s WHERE s.idShop = p.idShop AND p.oferVals IS NOT NULL
+	AND p.dataExpireVals IS NOT NULL ORDER BY dataExpireValsE";
 
 	$mySqlFilters= "SELECT idCategory, name, urlPicto1 FROM categories";
 
@@ -23,7 +24,7 @@ if(isset($_GET['acc']) && ($_GET['acc']=='l')){
 		{
 			$dades .= ",";
 		}	
-		$dades .= '{"image":"'.$row['image'].'", "idPromo":"'.$row['idPromotion'].'", "offer":"'.$row['oferVals'].'", "dataExpire":"'.$row['dataExpireVals'].'", "nameShop":"'.$row['name'].'"}';
+		$dades .= '{"image":"'.$row['image'].'", "idPromo":"'.$row['idPromotion'].'", "offer":"'.$row['oferVals'].'", "dataExpire":"'.$row['dataExpireValsE'].'", "nameShop":"'.$row['name'].'"}';
 		$i++;
 	}
 	$dades .= "],";

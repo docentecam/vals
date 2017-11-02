@@ -4,7 +4,7 @@
 			<label id="categories" class="col-lg-12 col-xs-6 col-md-12 col-sm-12">
 				Selecciona la categoria:
 			</label>
-			<div class="row">
+			<div class="row filtersMargin">
 				<label ng-repeat="filter in filters" class="col-lg-12 col-xs-12 col-md-12 col-sm-12 subCat">
 					<a href="" ng-click="filterCat(filter.idCategory)">
 						<div class="col-lg-3 col-xs-2 col-md-4 col-sm-4 pictoImg">
@@ -43,19 +43,14 @@
 					Inici 
 				</a>
 				<label>
-					 | Ofertes
+					| Ofertes
 				</label> 
 			</div>
 			<div class="col-lg-10 col-lg-offset-1">
-				<div class="col-lg-5">
+				<div class="col-lg-5 col-sm-5 col-xs-12 col-md-5">
 					<label class="titleOffer" id="shopMargin">
 						{{promoSel[0].nameShop}}
 					</label>
-					<div class="row">
-						<label class="col-lg-12 offerPromo">
-							{{promoSel[0].offer}}
-						</label>	
-					</div>
 					<div class="row">
 						<div class="imgOpa col-lg-12">
 							<label class="addressImg col-lg-12">
@@ -69,20 +64,25 @@
 				</div>
 				<div class="col-lg-5 condPromo">
 					<label class="col-lg-12 titleOfferPromo">
-						Oferta
+						{{promoSel[0].offer}}
 					</label>
+					<div>
+						<label class="condicionsPromo">
+							Condicions: 
+						</label>
+					</div>
 					<p class="col-lg-12s">
 						{{promoSel[0].conditions}}
 					</p>
+					<div>
+						<label>
+							 Data de caducitat {{promoSel[0].dataExpire}}
+						</label>
+					</div>
 				</div>
 			</div>
 		</div>
 		<div class="row infoPromo">
-			<div class="row">
-				<label class="date col-lg-4">
-					Data de caducitat {{promoSel[0].dataExpire}}
-				</label>
-			</div>
 			<div class="row">
 				<label class="date col-lg-4">
 					Telèfon {{promoSel[0].phone}}
@@ -98,7 +98,7 @@
 		<div class="row">
 			<div class="col-lg-12">
 				<div class="col-lg-3 col-lg-push-2 imgShop">
-					<img ng-src="../ebesos/img/logos-shops/{{promoSel[0].logo}}" alt="logoComerç" class="col-lg-6 col-xs-3 img-responsive imgLogo">
+					<img ng-src="{{web}}/img/logos-shops/{{promoSel[0].logo}}" alt="logoComerç" class="col-lg-6 col-xs-3 img-responsive imgLogo">
 				</div>
 				<div class="descShopSel col-lg-7">
 					<p class="descShopBold">
