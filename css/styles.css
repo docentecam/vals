@@ -69,7 +69,7 @@ body
     background-color: #f0f1f1!important;
     text-align: center;
     font-size: 15px;
-    margin-bottom: 10%;
+    margin-bottom: 15%;
 }
 
 .subCat
@@ -87,6 +87,7 @@ body
 #shopMargin
 {
     margin-left: -3.5%!important;
+    font-size: 20px;
 }
 
 .date
@@ -261,7 +262,7 @@ hr.style14
 }
 #categories
 {
-    margin-bottom: 2%;
+    margin-bottom: 5%;
 }
 .descShopBold
 {
@@ -318,7 +319,7 @@ hr.style14
 }
 #categories
 {
-    margin-bottom: 5%;
+    margin-bottom: 10%;
 }
 }
 
@@ -355,7 +356,7 @@ hr.style14
 }
 #categories
 {
-    margin-bottom: 5%;
+    margin-bottom: 10%;
 }
 }
 
