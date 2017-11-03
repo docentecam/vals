@@ -186,7 +186,7 @@ a:hover
 
 .condPromo
 {
-    margin-top: 10%!important;
+    margin-top: 5%!important;
     margin-left: 2%;
 }
 
@@ -275,12 +275,6 @@ hr.style14
     margin-top: 8%;
 }
 
-.condPromo
-{
-    margin-top: 0%!important;
-    margin-left: 2%;
-}
-
 .descShopBold
 {
     margin-right: 24%;
@@ -297,9 +291,13 @@ hr.style14
 } 
 .infoPromo
 {
-    margin-left: 6%;
+    margin-left: 1.6%;
 }
 
+.condPromo
+{
+    margin-left: -2.3%;
+}
 }
 
 @media (min-width: 480px) and (max-width: 575px) {    
@@ -311,7 +309,7 @@ hr.style14
 } 
 .infoPromo
 {
-    margin-left: 5%;
+    margin-left: 1%;
 }
 
 }
@@ -325,7 +323,7 @@ hr.style14
 } 
 .infoPromo
 {
-    margin-left: 5%;
+    margin-left: 0%;
 }
 
 }
