@@ -11,7 +11,8 @@ if(isset($_GET['acc']) && ($_GET['acc']=='l')){
 	LEFT JOIN promotions ON promotions.idShop = shops.idShop
 	WHERE promotions.oferVals IS NOT NULL
 	AND promotions.dateExpireVals IS NOT NULL 
-	ORDER BY promotions.idPromotion";
+	AND promotions.active='Y'
+	ORDER BY dateExpireVals";
 
 	$mySqlFilters= "SELECT idCategory, name, urlPicto1 FROM categories";
 

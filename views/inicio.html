@@ -13,6 +13,14 @@
 						{{filter.name}}
 					</a>
 				</label>
+				<label class="col-lg-12 col-xs-12 col-md-12 col-sm-12 subCatTOTS">
+					<a href="" ng-click="filterCat('')">
+						<div class="col-lg-3 col-xs-2 col-md-4 col-sm-4 pictoImg">
+							<img ng-src="img/pictoTOTS.svg" class="img-responsive"> 
+						</div>
+						Totes
+					</a>
+				</label>
 			</div>	
 		</div>
 		<div class="col-lg-10 col-xs-12 col-md-9 col-sm-9">
@@ -29,9 +37,7 @@
 					</label>
 				</div>
 				<div class="">
-					<label class="">
-						{{promo.nameShop}} - Busco {{idCategorySearch}} y tengo {{promo.idCategory}}
-					</label>
+					{{promo.nameShop}}
 				</div>							
 			</div>
 		</div>
@@ -76,7 +82,7 @@
 					</p>
 					<div>
 						<label>
-							 Data de caducitat {{promoSel[0].dateExpire}}
+							Data de caducitat {{promoSel[0].dateExpire}}
 						</label>
 					</div>
 				</div>
