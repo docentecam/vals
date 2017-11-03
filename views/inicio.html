@@ -16,7 +16,7 @@
 			</div>	
 		</div>
 		<div class="col-lg-10 col-xs-12 col-md-9 col-sm-9">
-			<div class="col-lg-4 col-xs-12 col-md-6 col-sm-6 promosAll" ng-repeat="promo in promos">
+			<div class="col-lg-4 col-xs-12 col-md-6 col-sm-6 promosAll" ng-repeat="promo in promos | filter:{idCategory:idCategorySearch}">
 				<a href="" ng-click="searchOffer(promo.idPromo)">
 					<img ng-src="{{web}}/img/promotions/{{promo.image}}" alt="categoria3" class="img-responsive imgCat">
 				</a>
@@ -30,7 +30,7 @@
 				</div>
 				<div class="">
 					<label class="">
-						{{promo.nameShop}}
+						{{promo.nameShop}} - Busco {{idCategorySearch}} y tengo {{promo.idCategory}}
 					</label>
 				</div>							
 			</div>

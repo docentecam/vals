@@ -3,14 +3,15 @@ require('../inc/functions.php');
 
 if(isset($_GET['acc']) && ($_GET['acc']=='l')){
 
-	$mySqlPromotions = "SELECT promotions.idPromotion, promotions.image, date_format(promotions.dateExpireVals,'%d/%m/%y') as dateExpireVals, promotions.oferVals, shops.name, category.idCategory
+	$mySqlPromotions = "SELECT DISTINCT(promotions.idPromotion), promotions.image, date_format(promotions.dateExpireVals,'%d/%m/%y') as dateExpireVals, promotions.oferVals, shops.name, categories.idCategory
 	FROM categories
 	LEFT JOIN categoriessub ON categoriessub.idCategory = categories.idCategory
 	LEFT JOIN shopcategoriessub ON shopcategoriessub.idSubCategory = categoriessub.idSubCategory
 	LEFT JOIN shops ON shopcategoriessub.idShop = shops.idShop
 	LEFT JOIN promotions ON promotions.idShop = shops.idShop
-	AND promotions.oferVals IS NOT NULL
-	AND promotions.dateExpireVals IS NOT NULL ORDER BY idPromotion;";
+	WHERE promotions.oferVals IS NOT NULL
+	AND promotions.dateExpireVals IS NOT NULL 
+	ORDER BY promotions.idPromotion";
 
 	$mySqlFilters= "SELECT idCategory, name, urlPicto1 FROM categories";
 

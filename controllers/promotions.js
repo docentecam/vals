@@ -2,6 +2,7 @@ angular.module('spaApp')
 .controller('PromotionsCtrl', function($scope, $http) {
 	$scope.list = true;
 	$scope.loading=true;
+	$scope.idCategorySearch="";
 
 	$http({
 		method : "GET",
@@ -22,21 +23,7 @@ angular.module('spaApp')
 
 	$scope.filterCat = function(idCategory)
 	{
-		console.log (idCategory);
-				$http({
-			method : "GET",
-			url : "models/promotions.php?acc=f&idCategory=" + idCategory
-		}).then(function mySucces (response) {
-			$scope.promos=response.data;
-			console.log($scope.promos);
-			$scope.list = false;
-		}, function myError (response) {
-			$scope.promos = response.statusText;
-		})
-		.finally (function(){
-			$scope.loading=false;
-		});
-
+		$scope.idCategorySearch=idCategory;
 	}
 
 	$scope.searchOffer = function(idPromo)
