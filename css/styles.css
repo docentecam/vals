@@ -280,6 +280,11 @@ hr.style14
     margin-left: 2%;
 }
 
+.descShopBold
+{
+    margin-right: 24%;
+}
+
 }
 
 @media (min-width: 320px) and (max-width: 479px) {    
