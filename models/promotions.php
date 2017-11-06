@@ -32,7 +32,7 @@ if(isset($_GET['acc']) && ($_GET['acc']=='l')){
 		{
 			$dades .= ",";
 		}	
-		$dades .= '{"image":"'.$row['image'].'", "idPromo":"'.$row['idPromotion'].'", "offer":"'.$row['oferVals'].'", "dateExpire":"'.$row['dateExpireVals'].'", "nameShop":"'.$row['name'].'", "idCategory":"'.$row['idCategory'].'"}';
+		$dades .= '{"image":"'.$row['image'].'", "idPromo":"'.$row['idPromotion'].'", "offer":"'.str_replace(array("\r\n", "\r", "\n"), "\\n",$row['oferVals']).'", "dateExpire":"'.$row['dateExpireVals'].'", "nameShop":"'.$row['name'].'", "idCategory":"'.$row['idCategory'].'"}';
 		$i++;
 	}
 	$dades .= "],";
@@ -69,12 +69,35 @@ if(isset($_GET['acc']) && ($_GET['acc']=='l')){
 
 if(isset($_GET['acc']) && ($_GET['acc']=='s')){
 	$mySql = "SELECT p.idPromotion, p.image, date_format(p.dateExpireVals,'%d/%m/%y') as dateExpireVals, p.oferVals, p.conditionsVals, s.name, s.telephone, s.email, s.url, s.address, s.descriptionLong, s.logo FROM promotions p, shops s WHERE s.idShop = p.idShop AND p.idPromotion=".$_GET['idPromo']." ORDER BY p.dateExpireVals";
+	$mySqlWeb = "SELECT value FROM settings WHERE literal = 'urlEix'";
+
 	$connexio = connect();
 	$resultPromotion = mysqli_query($connexio, $mySql);
+	$resultWeb = mysqli_query($connexio, $mySqlWeb);
 	disconnect($connexio);
 
-	$dadesPromo = mySqli_fetch_row($resultPromotion);
-	$dades='[{"image":"'.$dadesPromo[1].'", "idPromo":"'.$dadesPromo[0].'", "offer":"'.$dadesPromo[3].'", "dateExpire":"'.$dadesPromo[2].'", "conditions":"'.$dadesPromo[4].'", "nameShop":"'.$dadesPromo[5].'", "phone":"'.$dadesPromo[6].'", "mail":"'.$dadesPromo[7].'", "url":"'.$dadesPromo[8].'", "address":"'.$dadesPromo[9].'", "descriptionLong":"'.$dadesPromo[10].'", "logo":"'.$dadesPromo[11].'"}]';
+	$dades='[{';
+	$dades.='"promotion":[';
+
+	while ($row=mySqli_fetch_array($resultPromotion))
+	{
+	$dades.='{"idPromo":"'.$row['idPromotion'].'", "image":"'.$row['image'].'", "dateExpire":"'.$row['dateExpireVals'].'", "offer":"'.str_replace(array("\r\n", "\r", "\n"), "\\n",$row['oferVals']).'", "conditions":"'.str_replace(array("\r\n", "\r", "\n"), "\\n",$row['conditionsVals']).'", "nameShop":"'.$row['name'].'", "phone":"'.$row['telephone'].'", "mail":"'.$row['email'].'", "url":"'.$row['url'].'", "address":"'.$row['address'].'", "descriptionLong":"'.$row['descriptionLong'].'", "logo":"'.$row['logo'].'"}';
+	}
+	$dades.=']';
+	$dades .= ',"web":[';
+
+	$i = 0;
+	while ($row=mySqli_fetch_array($resultWeb))
+	{
+		if($i!=0) 
+		{
+			$dades .= ",";
+		}	
+		$dades .= '{"urlWeb":"'.$row['value'].'"}';
+		$i++;
+	}
+	$dades .= "]";
+	$dades.="}]";
 	echo $dades;
 }
 

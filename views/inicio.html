@@ -1,5 +1,5 @@
 <div class="content">
-	<div class="row" ng-show="list">
+	<div class="row">
 		<div class="col-lg-2 col-xs-12 col-md-3 col-sm-3">
 			<label id="categories" class="col-lg-12 col-xs-6 col-md-12 col-sm-12">
 				Selecciona la categoria:
@@ -25,7 +25,7 @@
 		</div>
 		<div class="col-lg-10 col-xs-12 col-md-9 col-sm-9">
 			<div class="col-lg-4 col-xs-12 col-md-6 col-sm-6 promosAll" ng-repeat="promo in promos | filter:{idCategory:idCategorySearch}">
-				<a href="" ng-click="searchOffer(promo.idPromo)">
+				<a ng-href="#/promotion/{{promo.idPromo}}" ><!-- ng-click="searchOffer(promo.idPromo)" -->
 					<img ng-src="{{web}}/img/promotions/{{promo.image}}" alt="categoria3" class="img-responsive imgCat">
 				</a>
 				<label class="date">
@@ -39,84 +39,6 @@
 				<div class="">
 					{{promo.nameShop}}
 				</div>							
-			</div>
-		</div>
-	</div>
-	<div ng-hide="list">
-		<div class="row">
-			<div class="breadCrumb col-lg-12 ">
-				<a href="#">
-					Inici 
-				</a>
-				<label>
-					| Ofertes
-				</label> 
-			</div>
-			<div class="col-lg-10 col-lg-offset-1 col-md-offset-1 col-sm-offset-1">
-				<div class="col-lg-5 col-sm-5 col-xs-12 col-md-5">
-					<label class="titleOffer" id="shopMargin">
-						{{promoSel[0].nameShop}}
-					</label>
-					<div class="row">
-						<div class="imgOpa col-lg-12">
-							<label class="addressImg col-lg-12 col-xs-12">
-								<i class="fa fa-map-marker" id="icoGps" aria-hidden="true"></i>Carrer {{promoSel[0].address}}
-							</label>
-						</div>
-						<div class="col-lg-12 imgPadd">
-							<img ng-src="{{web}}/img/promotions/{{promoSel[0].image}}" alt="categoria3" class="img-responsive imgPromoSel">	
-						</div>						
-					</div>
-				</div>
-				<div class="col-lg-5 col-sm-5 condPromo">
-					<label class="col-lg-12 titleOfferPromo">
-						{{promoSel[0].offer}}
-					</label>
-					<div>
-						<label class="condicionsPromo">
-							Condicions: 
-						</label>
-					</div>
-					<p class="">
-						{{promoSel[0].conditions}}
-					</p>
-					<div>
-						<label>
-							Data de caducitat {{promoSel[0].dateExpire}}
-						</label>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="row infoPromo">
-			<div class="row">
-				<label class="date col-lg-4 col-xs-12">
-					Telèfon {{promoSel[0].phone}}
-				</label>
-			</div>
-			<div class="row">
-				<label class="date col-lg-4 col-xs-12">
-					{{promoSel[0].mail}}
-				</label>
-			</div>
-		</div>
-		<hr class="style14">
-		<div class="row">
-			<div class="col-lg-12">
-				<div class="col-lg-3 col-lg-push-2 imgShop">
-					<span ng-if="promoSel[0].logo==''" class="col-lg-6 col-xs-3 img-responsive imgLogo"></span>
-					<img ng-if="promoSel[0].logo!=''" ng-src="{{web}}/img/logos-shops/{{promoSel[0].logo}}" alt="logoComerç" class="col-lg-6 col-xs-3 img-responsive imgLogo">
-				</div>
-				<div class="descShopSel col-lg-7">
-					<p class="descShopBold">
-						Descripció de la empresa:
-					</p>
-				</div>
-				<div class="col-lg-6">
-					<p class="condPromoShop">
-						{{promoSel[0].descriptionLong}}
-					</p>
-				</div>
 			</div>
 		</div>
 	</div>

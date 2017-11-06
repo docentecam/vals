@@ -5,8 +5,11 @@ app.config(['$routeProvider', function ($routeProvider) {
         templateUrl: 'views/inicio.html',
         controller: 'PromotionsCtrl',
     })
-
-    // .otherwise({
-    //     redirectTo: '/'
-    // });
+    .when('/promotion/:idPromotion', {
+        templateUrl: 'views/promotion.html',
+        controller: 'PromotionCtrl',
+    })
+    .otherwise({
+        redirectTo: '/'
+    });
 }]); 
