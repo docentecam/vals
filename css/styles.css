@@ -129,7 +129,7 @@ a:hover
     background-color: #A8A9AB;
     z-index: 2;
     height: 40px;
-    opacity: 0.5;
+    opacity: 0.8;
     position: absolute;
     bottom: 0%;
     width: 100%;
@@ -284,34 +284,41 @@ hr.style14
 
 @media (min-width: 320px) and (max-width: 479px) {    
  
- .pictoImg
-{
-    margin-top: -0.5%;
-    width: 14%;  
-} 
-.infoPromo
-{
-    margin-left: 1.6%;
+    .pictoImg
+    {
+        margin-top: -0.5%;
+        width: 14%;  
+    } 
+    .infoPromo
+    {
+        margin-left: 1.6%;
+    }
+
+    .condPromo
+    {
+        margin-left: -2.3%;
+    }
 }
 
-.condPromo
-{
-    margin-left: -2.3%;
-}
-}
 
 @media (min-width: 480px) and (max-width: 575px) {    
  
- .pictoImg
-{
-    margin-top: -0.5%;
-    width: 12%;  
-} 
-.infoPromo
-{
-    margin-left: 1%;
-}
+    .pictoImg
+    {
+        margin-top: -0.5%;
+        width: 12%;  
+    } 
+    .infoPromo
+    {
+        margin-left: 1%;
+    }
 
+}
+@media (max-width: 767px) {    
+    #barraacceptacio {
+        bottom:5%!important;
+        min-height:120px;
+    }
 }
 
 @media (min-width: 576px) and (max-width: 767px) {    
@@ -395,9 +402,9 @@ hr.style14
    #categories
    {
     margin-bottom: 10%;
-}
-.infoPromo
-{
-    margin-left: 8.5%;
-}
+    }
+    .infoPromo
+    {
+        margin-left: 8.5%;
+    }
 }
