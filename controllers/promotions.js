@@ -10,7 +10,9 @@ angular.module('spaApp')
 		$scope.promos=$scope.data[0].promotions;
 		$scope.filters=$scope.data[0].filters;
 		$scope.web=$scope.data[0].web[0].urlWeb;
-	}, function myError (response) {
+		console.log($scope.data);
+		console.log("pagina"+$scope.web);
+		}, function myError (response) {
 		$scope.data = response.statusText;
 	})
 	.finally (function(){

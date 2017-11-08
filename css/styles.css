@@ -181,9 +181,18 @@ a:hover
 #footerDiv
 {   
     height: 100px;
-    background-color: #2a4357;
+    background-color: #627c90;
 }
 
+.XNasso
+{
+    margin-top: 14%;
+}
+
+.asso1 
+{
+    margin-top: 6%;
+}
 .condPromo
 {
     margin-top: 5%!important;
