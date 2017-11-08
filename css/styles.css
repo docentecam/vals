@@ -326,8 +326,9 @@ hr.style14
 @media (max-width: 767px) {    
     #barraacceptacio {
         bottom:5%!important;
-        min-height:120px;
+        min-height:150px!important;
     }
+
 }
 
 @media (min-width: 576px) and (max-width: 767px) {    
