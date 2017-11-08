@@ -24,10 +24,14 @@
 			</div>	
 		</div>
 		<div class="col-lg-10 col-xs-12 col-md-9 col-sm-9">
+			<div class="col-xs-12 alert alert-info text-center" ng-if="(promos | filter:{idCategory:idCategorySearch}).length==0">
+				Estem treballant en noves ofertes
+			</div>
 			<div class="col-lg-4 col-xs-12 col-md-6 col-sm-6 promosAll" ng-repeat="promo in promos | filter:{idCategory:idCategorySearch}">
 				<a ng-href="#/promotion/{{promo.idPromo}}" ><!-- ng-click="searchOffer(promo.idPromo)" -->
 					<img ng-src="{{web}}/img/promotions/{{promo.image}}" alt="categoria3" class="img-responsive imgCat">
 				</a>
+
 				<label class="date">
 					Data de caducitat {{promo.dateExpire}}
 				</label>
@@ -40,6 +44,7 @@
 					{{promo.nameShop}}
 				</div>							
 			</div>
+			
 		</div>
 	</div>
 </div> 

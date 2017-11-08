@@ -1,5 +1,6 @@
 angular.module('spaApp')
 .controller('PromotionsCtrl', function($scope, $http) {
+	$scope.noData=true;
 	$scope.loading=true;
 
 	$http({
@@ -21,6 +22,7 @@ angular.module('spaApp')
 
 	$scope.filterCat = function(idCategory)
 	{
+		$scope.noData=true;
 		$scope.idCategorySearch=idCategory;
 	}
 });
