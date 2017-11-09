@@ -81,7 +81,7 @@ if(isset($_GET['acc']) && ($_GET['acc']=='s')){
 
 	while ($row=mySqli_fetch_array($resultPromotion))
 	{
-	$dades.='{"idPromo":"'.$row['idPromotion'].'", "image":"'.$row['image'].'", "dateExpire":"'.$row['dateExpireVals'].'", "offer":"'.str_replace(array("\r\n", "\r", "\n"), "\\n",$row['oferVals']).'", "conditions":"'.str_replace(array("\r\n", "\r", "\n"), "\\n",$row['conditionsVals']).'", "nameShop":"'.$row['name'].'", "phone":"'.$row['telephone'].'", "mail":"'.$row['email'].'", "url":"'.$row['url'].'", "address":"'.$row['address'].'", "descriptionLong":"'.$row['descriptionLong'].'", "logo":"'.$row['logo'].'"}';
+	$dades.='{"idPromo":"'.$row['idPromotion'].'", "image":"'.$row['image'].'", "dateExpire":"'.$row['dateExpireVals'].'", "offer":"'.str_replace(array("\r\n", "\r", "\n"), "\\n",$row['oferVals']).'", "conditions":"'.str_replace(array("\r\n", "\r", "\n"), "\\n",$row['conditionsVals']).'", "nameShop":"'.$row['name'].'", "phone":"'.$row['telephone'].'", "mail":"'.$row['email'].'", "url":"'.$row['url'].'", "address":"'.$row['address'].'", "descriptionLong":"'.str_replace(array("\r\n", "\r", "\n"), "\\n",$row['descriptionLong']).'", "logo":"'.$row['logo'].'"}';
 	}
 	$dades.=']';
 	$dades .= ',"web":[';
