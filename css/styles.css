@@ -220,6 +220,7 @@ a:hover
 .breadCrumb
 {
     padding-bottom: 3%!important;
+    padding-top: 3%;
 }
 
 hr.style14 
@@ -295,7 +296,6 @@ hr.style14
 .imgLogo
 {
     padding-right: 5%;
-    margin-top: 8%;
 }
 
 .descShopBold
