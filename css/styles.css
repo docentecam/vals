@@ -182,6 +182,11 @@ a:hover
     margin-bottom: 5%!important;
 }
 
+.promoLogo
+{
+    margin-left: 5%;
+}
+
 .titleOfferPromo
 {
     font-weight: 600!important;
