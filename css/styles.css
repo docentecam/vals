@@ -193,6 +193,7 @@ a:hover
 {
     margin-top: 6%;
 }
+
 .condPromo
 {
     margin-top: 5%!important;
@@ -322,6 +323,19 @@ hr.style14
         margin-left: 1%;
     }
 
+    .XNasso
+{
+    width: 30%;
+    height: 30%;
+}
+
+.asso1 
+{
+    width: 30%;
+    height: 30%;
+    margin-left: 35%;
+}
+
 }
 @media (max-width: 767px) {    
     #barraacceptacio {
@@ -341,6 +355,20 @@ hr.style14
 .infoPromo
 {
     margin-left: 0%;
+}
+
+.XNasso
+{
+    width: 20%;
+    height: 20%;
+    margin-top: 10%;
+}
+
+.asso1 
+{
+    width: 20%;
+    height: 20%;
+    margin-left: 35%;
 }
 
 }
