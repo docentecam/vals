@@ -41,7 +41,6 @@
     font-weight: 300!important;
 }
 
-
 body
 {
     margin-left:15px!important;
@@ -106,6 +105,19 @@ body
 .filtersMargin
 {
     margin-bottom: 5%!important;
+}
+
+.alert-info
+{
+    background-color: white;
+    width: 30%;
+    padding: 3%;
+    border-radius: 10px; 
+}
+
+.icoLight
+{
+    padding: 2%;
 }
 
 a
@@ -176,12 +188,6 @@ a:hover
     font-size: 25px!important;
     margin-top: 8%!important;
     padding: 0;
-}
-
-#footerDiv
-{   
-    height: 100px;
-    background-color: #627c90;
 }
 
 .XNasso
@@ -259,6 +265,13 @@ hr.style14
     margin-top: 10%!important;
 }
 
+
+#footerDiv
+{   
+    height: 100px;
+    background-color: #627c90;
+}
+
 /*Extra small devices (portrait phones, less than 576px)*/
 @media (min-width: 320px) { 
     #headerTitle
@@ -290,6 +303,12 @@ hr.style14
     margin-right: 24%;
 }
 
+.promoLogo
+{
+    margin-bottom: 5%;
+    margin-top: 2%;
+}
+
 }
 
 @media (min-width: 320px) and (max-width: 479px) {    
@@ -308,6 +327,12 @@ hr.style14
     {
         margin-left: -2.3%;
     }
+
+    .alert-info
+{
+    width: 70%;
+    padding: 5%;
+}
 }
 
 
@@ -334,6 +359,12 @@ hr.style14
     width: 30%;
     height: 30%;
     margin-left: 35%;
+}
+
+.alert-info
+{
+    width: 60%;
+    padding: 5%;
 }
 
 }
@@ -371,6 +402,11 @@ hr.style14
     margin-left: 35%;
 }
 
+.alert-info
+{
+    width: 55%;
+    padding: 5%;
+}
 }
 
 /*Small devices (landscape phones, less than 768px)*/
@@ -402,6 +438,25 @@ hr.style14
     width: 25%;  
 } 
 
+.XNasso
+{
+    width: 15%;
+    height: 15%;
+    margin-top: 10%;
+}
+
+.asso1 
+{
+    width: 15%;
+    height: 15%;
+    margin-left: 35%;
+}
+
+.alert-info
+{
+    width: 55%;
+    padding: 5%;
+}
 }
 
 @media (min-width: 951px) and (max-width: 1199px) {    
@@ -412,6 +467,25 @@ hr.style14
     width: 20%;  
 } 
 
+.XNasso
+{
+    width: 15%;
+    height: 15%;
+    margin-top: 10%;
+}
+
+.asso1 
+{
+    width: 15%;
+    height: 15%;
+    margin-left: 35%;
+}
+
+.alert-info
+{
+    width: 60%;
+    padding: 5%;
+}
 }
 
 /*Medium devices (tablets, less than 992px)*/
@@ -445,4 +519,25 @@ hr.style14
     {
         margin-left: 8.5%;
     }
+
+    .XNasso
+{
+    width: 15%;
+    height: 15%;
+    margin-top: 6%;
+}
+
+.asso1 
+{
+    width: 13%;
+    height: 13%;
+    margin-left: 70%;
+    margin-top: 4%;
+}
+
+.alert-info
+{
+    width: 55%;
+    padding: 5%;
+}
 }
