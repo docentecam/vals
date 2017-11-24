@@ -12,6 +12,7 @@ angular.module('spaApp')
 		$scope.web=$scope.data[0].web[0].urlWeb;
 		}, function myError (response) {
 		$scope.data = response.statusText;
+		console.log("filtros: "+$scope.filters);
 	})
 	.finally (function(){
 		$scope.loading=false;

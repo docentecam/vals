@@ -1,0 +1,25 @@
+<div class="content">
+	<div class="row">
+		<div class="col-lg-10 col-xs-12 col-md-9 col-sm-9">
+			<div class="col-xs-12 col-lg-offset-2 col-xs-offset-2 alert alert-info text-center" ng-if="(promos | filter:{idCategory:idCategorySearch}).length==0">
+				<i class="fa fa-lightbulb-o fa-2x icoLight" aria-hidden="true"></i>Estem treballant en noves ofertes
+			</div>
+			<div class="col-lg-4 col-xs-12 col-md-6 col-sm-6 promosAll" ng-repeat="promo in promos | filter:{idCategory:idCategorySearch}">
+				<a ng-href="#/promotion/{{promo.idPromo}}" ><!-- ng-click="searchOffer(promo.idPromo)" -->
+					<img ng-src="{{web}}/img/promotions/{{promo.image}}" alt="categoria3" class="img-responsive imgCat">
+				</a>
+				<label class="datePromos">
+					Data de caducitat {{promo.dateExpire}}
+				</label>
+				<div class="">
+					<label class="titleOffer">
+						{{promo.offer}}
+					</label>
+				</div>
+				<div class="">
+					{{promo.nameShop}}
+				</div>							
+			</div>
+		</div>
+	</div>
+</div> 

@@ -3,8 +3,11 @@ app.config(['$routeProvider', function ($routeProvider) {
     $routeProvider
     .when('/', {
         templateUrl: 'views/inicio.html',
-        controller: 'PromotionsCtrl',
     })
+    // .when('/promotion/:idPromotion', {
+    //     templateUrl: 'views/promotions.html',
+    //     controller: 'PromotionCtrl',
+    // })
     .when('/promotion/:idPromotion', {
         templateUrl: 'views/promotion.html',
         controller: 'PromotionCtrl',

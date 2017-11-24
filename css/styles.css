@@ -44,14 +44,68 @@ body
     margin-left:15px!important;
     margin-right:15px!important; 
 }
-#headerTitle
+.navGeneral
 {
-   position: absolute;
-   top: 0%;
-   margin-top: 5%;
-   color: white;
-   margin-left: 4%;
+    border-bottom: none;
+    margin-top: 0.5%!important;
+    background-color: white;
+    border: 1px solid;
+    border-color: #D3D3D3;
+    border-radius: 0px;
 }
+.customNav
+{
+    width: 19.2%!important;
+    border-right: 1px solid;
+    border-color: #D3D3D3;
+}
+.customNav:hover
+{
+    background-color: #DBDBDB;
+}
+.noBorder
+{
+    border-right: none!important;
+}
+.navbar
+{
+    margin-bottom: 0px!important;
+}
+.navbar .navbar-nav
+{
+  display: inline-block;
+  float: none;
+  vertical-align: top;
+
+}
+.navbar .navbar-collapse
+{
+  text-align: center;
+  background-color: white!important;  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .content
 {
     padding: 2%!important;
