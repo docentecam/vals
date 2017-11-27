@@ -41,13 +41,14 @@
 		    	</div>
 		    	<div class="collapse navbar-collapse navReduced" id="bs-example-navbar-collapse-1">
 		    		<ul class="nav navbar-nav col-xs-12 col-lg-12" id="navGlobal">
+
 					<li role="presentation" class="customNav reduceNav  col-lg-12" ng-repeat="filter in filters">
-						<a href="" ng-click="filterCat(filter.idCategory)"><img ng-src="{{web}}/img/pictograms/{{filter.urlPicto1}}" class="img-responsive col-lg-4">
+						<a href="" ng-click="filterCat(filter.idCategory)" class="aUrlNav"><img ng-src="{{web}}/img/pictograms/{{filter.urlPictoNavVals}}" class="img-responsive col-lg-4">
 							{{filter.name}}
 						</a>
 					</li>
 					<li role="presentation" class="customNav reduceNav noBorder col-lg-12">
-						<a href="" ng-click="filterCat('')"><img ng-src="img/pictoTOTS.svg" class="img-responsive col-lg-4"> 
+						<a href="" ng-click="filterCat('')" class="aUrlAll"><img ng-src="{{web}}/img/pictograms/pictoTOTSV.svg" class="img-responsive col-lg-4"> 
 							Totes
 						</a>
 					</li>
@@ -57,6 +58,14 @@
 		</nav>
 			</header>
 		</div>
+		<!-- <div class="row navPrueba">
+			<img src="img/pictogramesVals/cdV.svg" class="img-responsive col-lg-2" alt="">
+			<img src="img/pictogramesVals/restV.svg" class="img-responsive col-lg-2" alt="">
+			<img src="img/pictogramesVals/servV.svg" class="img-responsive col-lg-2" alt="">
+			<img src="img/pictogramesVals/pictoTOTSV.svg" class="img-responsive col-lg-2" alt="">
+			<img src="img/pictogramesVals/aliV.svg" class="img-responsive col-lg-2" alt="">
+		</div> -->
+		
 		<div class="row"> 
 			<div data-ng-view="">
 				<div ng-show="loading">
