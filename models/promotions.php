@@ -14,7 +14,7 @@ if(isset($_GET['acc']) && ($_GET['acc']=='l')){
 	AND promotions.active='Y'
 	ORDER BY dateExpireVals";
 
-	$mySqlFilters= "SELECT idCategory, name, urlPictoNavVals FROM categories";
+	$mySqlFilters= "SELECT idCategory, name, urlPictoNavVals, urlPicto1 FROM categories";
 
 	$mySqlWeb = "SELECT value FROM settings WHERE literal = 'urlEix'";
 
@@ -45,7 +45,7 @@ if(isset($_GET['acc']) && ($_GET['acc']=='l')){
 		{
 			$dades .= ",";
 		}	
-		$dades .= '{"idCategory":"'.$row['idCategory'].'", "name":"'.$row['name'].'", "urlPictoNavVals":"'.$row['urlPictoNavVals'].'"}';
+		$dades .= '{"idCategory":"'.$row['idCategory'].'", "name":"'.$row['name'].'", "urlPico1":"'.$row['urlPicto1'].'" ,"urlPictoNavVals":"'.$row['urlPictoNavVals'].'"}';
 		$i++;
 	}
 	$dades .= "],";
