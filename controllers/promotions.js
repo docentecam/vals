@@ -1,7 +1,7 @@
 angular.module('spaApp')
-.controller('PromotionsCtrl', function($scope, $http) {
+.controller('PromotionsCtrl', function($scope, $http, $routeParams) {
 	$scope.loading=true;
-
+	$scope.idCategorySearch= $routeParams.idCategorySearch;
 	$http({
 		method : "GET",
 		url : "models/promotions.php?acc=l"
@@ -18,10 +18,6 @@ angular.module('spaApp')
 		$scope.loading=false;
 	});
 
-	$scope.filterCat = function(idCategory)
-	{
-		$scope.idCategorySearch=idCategory;
-	}
 });
 
 angular.module('spaApp')

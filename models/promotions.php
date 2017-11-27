@@ -68,7 +68,10 @@ if(isset($_GET['acc']) && ($_GET['acc']=='l')){
 }
 
 if(isset($_GET['acc']) && ($_GET['acc']=='s')){
-	$mySql = "SELECT p.idPromotion, p.image, date_format(p.dateExpireVals,'%d/%m/%y') as dateExpireVals, p.oferVals, p.conditionsVals, s.name, s.telephone, s.email, s.url, s.address, s.descriptionLong, s.logo FROM promotions p, shops s WHERE s.idShop = p.idShop AND p.idPromotion=".$_GET['idPromo']." ORDER BY p.dateExpireVals";
+	$mySql = "SELECT p.idPromotion, p.image, date_format(p.dateExpireVals,'%d/%m/%y') as dateExpireVals, p.oferVals, p.conditionsVals, s.name, s.telephone, s.email, s.url, s.address, s.descriptionLong, s.logo 
+	FROM promotions p, shops s 
+	WHERE s.idShop = p.idShop 
+	AND p.idPromotion=".$_GET['idPromo']." ORDER BY p.dateExpireVals";
 	$mySqlWeb = "SELECT value FROM settings WHERE literal = 'urlEix'";
 
 	$connexio = connect();
@@ -101,33 +104,33 @@ if(isset($_GET['acc']) && ($_GET['acc']=='s')){
 	echo $dades;
 }
 
-if(isset($_GET['acc']) && ($_GET['acc']=='f')){
-	$idCategory=$_GET['idCategory'];
-	$mySql = "SELECT promotions.idPromotion, promotions.image, date_format(promotions.dateExpireVals,'%d/%m/%y') as dateExpireVals, promotions.oferVals, shops.name
-	FROM categories
-	LEFT JOIN categoriessub ON categoriessub.idCategory = categories.idCategory
-	LEFT JOIN shopcategoriessub ON shopcategoriessub.idSubCategory = categoriessub.idSubCategory
-	LEFT JOIN shops ON shopcategoriessub.idShop = shops.idShop
-	LEFT JOIN promotions ON promotions.idShop = shops.idShop
-	WHERE categories.idCategory =".$idCategory;
+// if(isset($_GET['acc']) && ($_GET['acc']=='f')){
+// 	$idCategory=$_GET['idCategory'];
+// 	$mySql = "SELECT promotions.idPromotion, promotions.image, date_format(promotions.dateExpireVals,'%d/%m/%y') as dateExpireVals, promotions.oferVals, shops.name
+// 	FROM categories
+// 	LEFT JOIN categoriessub ON categoriessub.idCategory = categories.idCategory
+// 	LEFT JOIN shopcategoriessub ON shopcategoriessub.idSubCategory = categoriessub.idSubCategory
+// 	LEFT JOIN shops ON shopcategoriessub.idShop = shops.idShop
+// 	LEFT JOIN promotions ON promotions.idShop = shops.idShop
+// 	WHERE categories.idCategory =".$idCategory;
 
-	$connexio = connect();
-	$resultFilterCat = mysqli_query($connexio, $mySql);
-	disconnect($connexio);
+// 	$connexio = connect();
+// 	$resultFilterCat = mysqli_query($connexio, $mySql);
+// 	disconnect($connexio);
 
-	//$dadesFilter = mySqli_fetch_row($resultFilterCat);
-	$dades = "[";
-	$i = 0;
-	while ($row=mySqli_fetch_array($resultFilterCat))
-	{
-		if($i!=0) 
-		{
-			$dades .= ",";
-		}	
-		$dades .= '{"image":"'.$row['image'].'", "idPromo":"'.$row['idPromotion'].'", "offer":"'.$row['oferVals'].'", "dateExpire":"'.$row['dateExpireVals'].'", "nameShop":"'.$row['name'].'"}';
-		$i++;
-	}
-	$dades .= "]";
-	echo $dades;
-}
+// 	//$dadesFilter = mySqli_fetch_row($resultFilterCat);
+// 	$dades = "[";
+// 	$i = 0;
+// 	while ($row=mySqli_fetch_array($resultFilterCat))
+// 	{
+// 		if($i!=0) 
+// 		{
+// 			$dades .= ",";
+// 		}	
+// 		$dades .= '{"image":"'.$row['image'].'", "idPromo":"'.$row['idPromotion'].'", "offer":"'.$row['oferVals'].'", "dateExpire":"'.$row['dateExpireVals'].'", "nameShop":"'.$row['name'].'"}';
+// 		$i++;
+// 	}
+// 	$dades .= "]";
+// 	echo $dades;
+// }
 ?>

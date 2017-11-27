@@ -43,12 +43,12 @@
 		    		<ul class="nav navbar-nav col-xs-12 col-lg-12" id="navGlobal">
 
 					<li role="presentation" class="customNav reduceNav  col-lg-12" ng-repeat="filter in filters">
-						<a href="" ng-click="filterCat(filter.idCategory)" class="aUrlNav"><img ng-src="{{web}}/img/pictograms/{{filter.urlPictoNavVals}}" class="img-responsive col-lg-4 imgPictoNav">
+						<a href="#/promotions/{{filter.idCategory}}" class="aUrlNav"><img ng-src="{{web}}/img/pictograms/{{filter.urlPictoNavVals}}" class="img-responsive col-lg-4 imgPictoNav">
 							{{filter.name}}
 						</a>
 					</li>
 					<li role="presentation" class="customNav reduceNav noBorder col-lg-12">
-						<a href="" ng-click="filterCat('')" class="aUrlAll"><img ng-src="{{web}}/img/pictograms/pictoTOTSV.svg" class="img-responsive col-lg-4 imgAllNav"> 
+						<a href="#/promotions/0" class="aUrlAll"><img ng-src="{{web}}/img/pictograms/pictoTOTSV.svg" class="img-responsive col-lg-4 imgAllNav"> 
 							Totes
 						</a>
 					</li>

@@ -4,10 +4,10 @@ app.config(['$routeProvider', function ($routeProvider) {
     .when('/', {
         templateUrl: 'views/inicio.html',
     })
-    // .when('/promotion/:idPromotion', {
-    //     templateUrl: 'views/promotions.html',
-    //     controller: 'PromotionCtrl',
-    // })
+    .when('/promotions/:idCategorySearch', {
+        templateUrl: 'views/promotions.html',
+        controller: 'PromotionsCtrl',
+    })
     .when('/promotion/:idPromotion', {
         templateUrl: 'views/promotion.html',
         controller: 'PromotionCtrl',
