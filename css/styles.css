@@ -98,15 +98,16 @@ body
 {
     text-align: center;
 }
-.imgPictoNav
+/*.imgPictoNav
 {
     margin-top: -5%;
 }
-.imgAllNav
+*/
+/*.imgAllNav
 {
     margin-top: -5%;
 }
-
+*/
 
 
 
@@ -249,14 +250,14 @@ a:hover
     margin-top: 8%!important;
     padding: 0;
 }
-.XNasso
+/*.XNasso
 {
     margin-top: 14%;
 }
 .asso1 
 {
     margin-top: 6%;
-}
+}*/
 .condPromo
 {
     margin-top: 5%!important;
@@ -325,6 +326,40 @@ hr.style14
 {
     padding:0!important;
 }
+.sNetwork
+{
+    margin-top: -5%;
+    color: #206B81; 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 #footerDiv
 {   
     height: 100px;

@@ -7,7 +7,7 @@
 			<div class="col-lg-10 col-lg-offset-1 col-md-offset-1 col-sm-offset-1">
 				<div class="col-lg-5 col-sm-5 col-xs-12 col-md-5">
 					<label class="titleOffer" id="shopMargin">
-						{{promoSel[0].nameShop}}
+						<a ng-href="{{web}}/#/shop/{{promoSel[0].idShop}}">{{promoSel[0].nameShop}}</a>
 					</label>
 					<div class="row">
 						<div class="imgOpa col-lg-12">
@@ -45,14 +45,21 @@
 		<div class="infoPromo">
 			<div class="">
 				<label class="date col-lg-12 col-xs-10 col-sm-12 col-md-12" id="marginTelf">
-					Telèfon {{promoSel[0].phone}}
+					Telèfon {{promoSel[0].phone}} 
 				</label>
 			</div>
 			<div class="">
 				<label class="date col-lg-4 col-xs-6" id="marginDate">
-					{{promoSel[0].mail}}
+					<a ng-href="mailto:{{promoSel[0].mail}}">{{promoSel[0].mail}}</a>
 				</label>
 			</div>
+			<div class="col-lg-12 sNetwork">
+				<label><i class="fa fa-whatsapp fa-2x" aria-hidden="true"></i></label>
+				<label class=""><i class="fa fa-facebook-official fa-2x" aria-hidden="true"></i></label>
+			    <label class=""><i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i></label>
+			    <label class=""><i class="fa fa-instagram fa-2x" aria-hidden="true"></i></label>
+			</div>
+		     
 		</div>
 		<hr class="style14">
 			<div class="col-lg-11 col-lg-offset-1 promoLogo">
