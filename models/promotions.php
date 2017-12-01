@@ -68,7 +68,7 @@ if(isset($_GET['acc']) && ($_GET['acc']=='l')){
 }
 
 if(isset($_GET['acc']) && ($_GET['acc']=='s')){
-	$mySql = "SELECT p.idPromotion, p.image, date_format(p.dateExpireVals,'%d/%m/%y') as dateExpireVals, p.oferVals, p.conditionsVals, s.name, s.telephone, s.email, s.url, s.address, s.descriptionLong, s.logo, s.lat, s.lng
+	$mySql = "SELECT p.idPromotion, p.image, date_format(p.dateExpireVals,'%d/%m/%y') as dateExpireVals, p.oferVals, p.conditionsVals, s.name, s.telephone, s.email, s.url, s.address, s.descriptionLong, s.logo, s.lat, s.lng, s.userWhatsapp, s.userFacebook, s.userTwitter, s.userInstagram
 	FROM promotions p, shops s 
 	WHERE s.idShop = p.idShop 
 	AND p.idPromotion=".$_GET['idPromo']." ORDER BY p.dateExpireVals";
@@ -84,7 +84,10 @@ if(isset($_GET['acc']) && ($_GET['acc']=='s')){
 
 	while ($row=mySqli_fetch_array($resultPromotion))
 	{
-	$dades.='{"idPromo":"'.$row['idPromotion'].'", "image":"'.$row['image'].'", "dateExpire":"'.$row['dateExpireVals'].'", "offer":"'.str_replace(array("\r\n", "\r", "\n"), "\\n",$row['oferVals']).'", "conditions":"'.str_replace(array("\r\n", "\r", "\n"), "\\n",$row['conditionsVals']).'", "nameShop":"'.$row['name'].'", "phone":"'.$row['telephone'].'", "mail":"'.$row['email'].'", "url":"'.$row['url'].'", "latitudeShop":"'.$row['lat'].'", "longitudShop":"'.$row['lng'].'", "address":"'.$row['address'].'", "descriptionLong":"'.str_replace(array("\r\n", "\r", "\n"), "\\n",$row['descriptionLong']).'", "logo":"'.$row['logo'].'"}';
+	$dades.='{"idPromo":"'.$row['idPromotion'].'", "image":"'.$row['image'].'", "dateExpire":"'.$row['dateExpireVals'].'", "offer":"'.replaceFromBBDD($row['oferVals']).'", "conditions":"'.replaceFromBBDD($row['conditionsVals']).'", "nameShop":"'.$row['name'].'", "phone":"'.$row['telephone'].'", "userWa":"'.$row['userWhatsapp'].'", "userFb":"'.replaceFromBBDD($row['userFacebook']).'", "userTt":"'.replaceFromBBDD($row['userTwitter']).'", "userIg":"'.replaceFromBBDD($row['userInstagram']).'", "mail":"'.$row['email'].'", "url":"'.$row['url'].'", "latitudeShop":"'.$row['lat'].'", "longitudShop":"'.$row['lng'].'", "address":"'.$row['address'].'", "descriptionLong":"'.replaceFromBBDD($row['descriptionLong']).'", "logo":"'.$row['logo'].'"}';
+ 
+
+	
 	}
 	$dades.=']';
 	$dades .= ',"web":[';
