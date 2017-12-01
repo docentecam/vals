@@ -314,10 +314,6 @@ hr.style14
  font-weight: 600!important;
  margin-top: 10%;
 }
-/*.logoAjuntament
-{
-    margin-top: 4%!important;
-}*/
 .descShop
 {
     margin-top: 10%!important;
@@ -350,10 +346,24 @@ hr.style14
 .user-service-no i{
   color: rgb(181, 183, 197);
 }
+.noPadd
+{
+    padding:0;
+}
 .footerLogos
 {
     margin-top: 1%;
 }
+.assos
+{
+    margin-top: 1%;
+}
+.fa-whatsapp
+{
+    vertical-align: middle;
+    margin-right: 0.3%;
+}
+
 
 
 
