@@ -7,7 +7,7 @@
 			<div class="col-lg-10 col-lg-offset-1 col-md-offset-1 col-sm-offset-1">
 				<div class="col-lg-5 col-sm-5 col-xs-12 col-md-5">
 					<label class="titleOffer" id="shopMargin">
-						<a ng-href="{{web}}/#/shop/{{promoSel[0].idShop}}">{{promoSel[0].nameShop}}</a>
+						<a ng-href="#/shop/{{promoSel[0].idShop}}">{{promoSel[0].nameShop}}</a>
 					</label>
 					<div class="row">
 						<div class="imgOpa col-lg-12">
@@ -59,20 +59,18 @@
 			    <label class=""><i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i></label>
 			    <label class=""><i class="fa fa-instagram fa-2x" aria-hidden="true"></i></label>
 			</div> -->
-<div class="col-lg-12 sNetwork">
-	<label class="col-lg-12 noPadd"><a href="https://api.whatsapp.com/send?phone=34{{shops.promotion[0].userWa}}" target="_blank" ng-class="service ? 'whatsapp-yes' : 'user-service-no'"><i class="fa fa-whatsapp fa-lg" aria-hidden="true"></i>{{shops.promotion[0].userWa}}</a></label>
-       <label class=""><a ng-href="{{shops.promotion[0].userFb}}" target="_blank" ng-class="facebook ? 'facebook-yes' : 'user-service-no'"><i class="fa fa-facebook-official  fa-2x" aria-hidden="true"></i></a></label>
-     <label class=""><a ng-href="{{shops.promotion[0].userTt}}" target="_blank" ng-class="twitter ? 'twitter-yes' : 'user-service-no'"><i class="fa fa-twitter-square  fa-2x" aria-hidden="true"></i></a></label>
-      <label class=""><a ng-href="{{shops.promotion[0].userIg}}" target="_blank" ng-class="instagram ? 'instagram-yes' : 'user-service-no'"><i class="fa fa-instagram  fa-2x" aria-hidden="true"></i></a></label>
-</div>
-			
-		     
+			<div class="col-lg-12 sNetwork">
+			<label class="col-lg-12 noPadd"><a href="https://api.whatsapp.com/send?phone=34{{shops.promotion[0].userWa}}" target="_blank" ng-class="service ? 'whatsapp-yes' : 'user-service-no'"><i class="fa fa-whatsapp fa-lg" aria-hidden="true"></i>{{shops.promotion[0].userWa}}</a></label>
+			<label class=""><a ng-href="{{shops.promotion[0].userFb}}" target="_blank" ng-class="facebook ? 'facebook-yes' : 'user-service-no'"><i class="fa fa-facebook-official  fa-2x" aria-hidden="true"></i></a></label>
+			<label class=""><a ng-href="{{shops.promotion[0].userTt}}" target="_blank" ng-class="twitter ? 'twitter-yes' : 'user-service-no'"><i class="fa fa-twitter-square  fa-2x" aria-hidden="true"></i></a></label>
+			<label class=""><a ng-href="{{shops.promotion[0].userIg}}" target="_blank" ng-class="instagram ? 'instagram-yes' : 'user-service-no'"><i class="fa fa-instagram  fa-2x" aria-hidden="true"></i></a></label>
+			</div>
 		</div>
 		<hr class="style14">
 			<div class="col-lg-11 col-lg-offset-1 promoLogo">
 				<div class="col-lg-1 col-xs-3 col-lg-offset-2 col-sm-2 col-sm-offset-1 col-md-1 imgShop">
 					<span ng-if="promoSel[0].logo==''" class=""></span>
-					<img ng-if="promoSel[0].logo!=''" ng-src="{{web}}/img/logos-shops/{{promoSel[0].logo}}" alt="logoComerç" class="img-responsive imgLogo">
+					<a ng-href="#/shop/{{promoSel[0].idShop}}"><img ng-if="promoSel[0].logo!=''" ng-src="{{web}}/img/logos-shops/{{promoSel[0].logo}}" alt="logoComerç" class="img-responsive imgLogo"></a>
 				</div>
 				<div class="col-lg-6 col-xs-9">
 					<div class="descShopSel col-lg-12 col-xs-12">

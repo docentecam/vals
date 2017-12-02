@@ -12,6 +12,10 @@ app.config(['$routeProvider', function ($routeProvider) {
         templateUrl: 'views/promotion.html',
         controller: 'PromotionCtrl',
     })
+    .when('/shop/:idShop',{
+        templateUrl:'views/shop.html',
+        controller:'ShopCtrl',
+    }) 
     .otherwise({
         redirectTo: '/'
     });

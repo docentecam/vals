@@ -93,21 +93,22 @@ body
 .catHome
 {
     margin-top: 5%;
+    margin-left: 20%;
 }
 .txtCatHome
 {
     text-align: center;
 }
-/*.imgPictoNav
+.imgPictoNav
 {
     margin-top: -5%;
 }
-*/
-/*.imgAllNav
+
+.imgAllNav
 {
     margin-top: -5%;
 }
-*/
+
 
 
 

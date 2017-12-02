@@ -68,7 +68,7 @@ if(isset($_GET['acc']) && ($_GET['acc']=='l')){
 }
 
 if(isset($_GET['acc']) && ($_GET['acc']=='s')){
-	$mySql = "SELECT p.idPromotion, p.image, date_format(p.dateExpireVals,'%d/%m/%y') as dateExpireVals, p.oferVals, p.conditionsVals, s.name, s.telephone, s.email, s.url, s.address, s.descriptionLong, s.logo, s.lat, s.lng, s.userWhatsapp, s.userFacebook, s.userTwitter, s.userInstagram
+	$mySql = "SELECT p.idPromotion, p.image, date_format(p.dateExpireVals,'%d/%m/%y') as dateExpireVals, p.oferVals, p.conditionsVals, s.name, s.telephone, s.email, s.url, s.address, s.descriptionLong, s.logo, s.lat, s.lng, s.userWhatsapp, s.userFacebook, s.userTwitter, s.userInstagram, s.idShop
 	FROM promotions p, shops s 
 	WHERE s.idShop = p.idShop 
 	AND p.idPromotion=".$_GET['idPromo']." ORDER BY p.dateExpireVals";
@@ -84,7 +84,7 @@ if(isset($_GET['acc']) && ($_GET['acc']=='s')){
 
 	while ($row=mySqli_fetch_array($resultPromotion))
 	{
-	$dades.='{"idPromo":"'.$row['idPromotion'].'", "image":"'.$row['image'].'", "dateExpire":"'.$row['dateExpireVals'].'", "offer":"'.replaceFromBBDD($row['oferVals']).'", "conditions":"'.replaceFromBBDD($row['conditionsVals']).'", "nameShop":"'.$row['name'].'", "phone":"'.$row['telephone'].'", "userWa":"'.$row['userWhatsapp'].'", "userFb":"'.replaceFromBBDD($row['userFacebook']).'", "userTt":"'.replaceFromBBDD($row['userTwitter']).'", "userIg":"'.replaceFromBBDD($row['userInstagram']).'", "mail":"'.$row['email'].'", "url":"'.$row['url'].'", "latitudeShop":"'.$row['lat'].'", "longitudShop":"'.$row['lng'].'", "address":"'.$row['address'].'", "descriptionLong":"'.replaceFromBBDD($row['descriptionLong']).'", "logo":"'.$row['logo'].'"}';
+	$dades.='{"idPromo":"'.$row['idPromotion'].'", "image":"'.$row['image'].'", "dateExpire":"'.$row['dateExpireVals'].'", "offer":"'.replaceFromBBDD($row['oferVals']).'", "conditions":"'.replaceFromBBDD($row['conditionsVals']).'", "idShop":"'.$row['idShop'].'", "nameShop":"'.$row['name'].'", "phone":"'.$row['telephone'].'", "userWa":"'.$row['userWhatsapp'].'", "userFb":"'.replaceFromBBDD($row['userFacebook']).'", "userTt":"'.replaceFromBBDD($row['userTwitter']).'", "userIg":"'.replaceFromBBDD($row['userInstagram']).'", "mail":"'.$row['email'].'", "url":"'.$row['url'].'", "latitudeShop":"'.$row['lat'].'", "longitudShop":"'.$row['lng'].'", "address":"'.$row['address'].'", "descriptionLong":"'.replaceFromBBDD($row['descriptionLong']).'", "logo":"'.$row['logo'].'"}';
  
 
 	

@@ -1,11 +1,12 @@
 <div class="">
-	<!-- <div class="col-lg-10 col-lg-offset-1"> -->
-		<div class="col-lg-4" ng-repeat="filter in filters">
+	<div class="col-lg-8 catHome">
+		<div class="col-lg-2" ng-repeat="filter in filters">
 			<a ng-href="#/promotions/{{filter.idCategory}}" ><img ng-src="{{web}}/img/pictograms/{{filter.urlPicto1}}" class="img-responsive ">
 				{{filter.name}}
 			</a>
 			
-		</div><div class="col-lg-4">
+		</div>
+		<div class="col-lg-2">
 			<a ng-href="#/promotions/0"><img ng-src="{{web}}/img/pictograms/pictoTOTS.svg" class="img-responsive "> 
 				Totes
 			</a>
