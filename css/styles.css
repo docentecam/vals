@@ -390,9 +390,6 @@ hr.style14
 
 
 
-
-
-
 #footerDiv
 {   
     height: 100px;
@@ -575,6 +572,10 @@ hr.style14
         width: 25%;
         height: 25%;
         margin-left: 30%;
+    }
+    .sNetwork
+    {
+        margin-left: 3.5%;
     }
 }
 /*Small devices (landscape phones, less than 768px)*/

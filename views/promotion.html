@@ -3,6 +3,7 @@
 				<a href="#">
 					Inici 
 				</a>
+				 <span> | </span> <span>{{promoSel[0].offer}}</span>
 			</div>
 			<div class="col-lg-10 col-lg-offset-1 col-md-offset-1 col-sm-offset-1">
 				<div class="col-lg-5 col-sm-5 col-xs-12 col-md-5">
@@ -59,8 +60,8 @@
 			    <label class=""><i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i></label>
 			    <label class=""><i class="fa fa-instagram fa-2x" aria-hidden="true"></i></label>
 			</div> -->
-			<div class="col-lg-12 sNetwork">
-			<label class="col-lg-12 noPadd"><a href="https://api.whatsapp.com/send?phone=34{{shops.promotion[0].userWa}}" target="_blank" ng-class="service ? 'whatsapp-yes' : 'user-service-no'"><i class="fa fa-whatsapp fa-lg" aria-hidden="true"></i>{{shops.promotion[0].userWa}}</a></label>
+			<div class="col-lg-12 col-xs-12 sNetwork">
+			<label class="col-lg-12 col-xs-12 noPadd"><a href="https://api.whatsapp.com/send?phone=34{{shops.promotion[0].userWa}}" target="_blank" ng-class="service ? 'whatsapp-yes' : 'user-service-no'"><i class="fa fa-whatsapp fa-lg" aria-hidden="true"></i>{{shops.promotion[0].userWa}}</a></label>
 			<label class=""><a ng-href="{{shops.promotion[0].userFb}}" target="_blank" ng-class="facebook ? 'facebook-yes' : 'user-service-no'"><i class="fa fa-facebook-official  fa-2x" aria-hidden="true"></i></a></label>
 			<label class=""><a ng-href="{{shops.promotion[0].userTt}}" target="_blank" ng-class="twitter ? 'twitter-yes' : 'user-service-no'"><i class="fa fa-twitter-square  fa-2x" aria-hidden="true"></i></a></label>
 			<label class=""><a ng-href="{{shops.promotion[0].userIg}}" target="_blank" ng-class="instagram ? 'instagram-yes' : 'user-service-no'"><i class="fa fa-instagram  fa-2x" aria-hidden="true"></i></a></label>
