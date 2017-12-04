@@ -351,10 +351,6 @@ hr.style14
 {
     padding:0;
 }
-.footerLogos
-{
-    margin-top: 1%;
-}
 .assos
 {
     margin-top: 1%;
@@ -364,8 +360,11 @@ hr.style14
     vertical-align: middle;
     margin-right: 0.3%;
 }
-
-
+.nomFilterCenter
+{
+    text-align: center;
+    margin-bottom: 5%;
+}
 
 
 
@@ -399,10 +398,6 @@ hr.style14
     height: 100px;
     background-color: #2fa1c0;
     margin-top: 5%;
-}
-.logosFooter
-{
-    padding: 0!important;
 }
 /*Extra small devices (portrait phones, less than 576px)*/
 @media (min-width: 320px) { 
@@ -479,6 +474,10 @@ hr.style14
     #marginDate
     {
         margin-bottom: 10%;
+    }
+       .footerLogos
+    {
+        margin-top: 5%;
     }
 }
 @media (min-width: 480px) and (max-width: 575px) {    
@@ -658,6 +657,10 @@ hr.style14
         width: 60%;
         padding: 5%;
     }
+     .catHome
+    {
+        margin-left: 15%;
+    }
 }
 /*Medium devices (tablets, less than 992px)*/
 @media (min-width: 992px) {   
@@ -691,6 +694,7 @@ hr.style14
     {
         margin-top: 25%;
     }
+   
 }
 /*Large devices (desktops, less than 1200px)*/
 @media (min-width: 1200px) {    
@@ -725,4 +729,5 @@ hr.style14
         width: 55%;
         padding: 5%;
     }
+
 }
