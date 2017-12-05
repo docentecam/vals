@@ -5,7 +5,7 @@ angular.module('spaApp')
  	$scope.facebook = false;
  	$scope.twitter = false;
  	$scope.instagram = false;
-	$scope.idCategorySearch= $routeParams.idCategorySearch;
+ 	if($routeParams.idCategorySearch!='0') $scope.idCategorySearch= $routeParams.idCategorySearch; else $scope.idCategorySearch='';
 	$http({
 		method : "GET",
 		url : "models/promotions.php?acc=l"
