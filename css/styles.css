@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300, 600, 700');
-
+#map{
+    height: 500px;
+}
 /*BLOQUE COOKIES*/
 #barraacceptacio {
     display:none;
@@ -511,6 +513,12 @@ hr.style14
     {
         width: 60%;
         padding: 5%;
+    }
+    #map{
+        height: 250px;
+        padding: 0;
+        margin-left: -15px;
+        margin-right: -15px;
     }
 }
 @media (max-width: 767px) {    
