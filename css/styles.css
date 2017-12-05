@@ -365,7 +365,15 @@ hr.style14
     text-align: center;
     margin-bottom: 5%;
 }
-
+.nameHome
+{
+    color: #6a8aa1;
+}
+.nameHome:hover
+{
+    color: #516879;
+    font-weight: 600!important;
+}
 
 
 
