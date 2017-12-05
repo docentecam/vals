@@ -1,6 +1,5 @@
 angular.module('spaApp')
 .controller('ShopCtrl', function($scope, $http, $routeParams) {
-  console.log("Entra");
   $scope.loading = true;
   $scope.service = false;
   $scope.facebook = false;
