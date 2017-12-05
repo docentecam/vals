@@ -403,6 +403,8 @@ hr.style14
     height: 100px;
     background-color: #2fa1c0;
     margin-top: 5%;
+    bottom: 0;
+    position: absolute;
 }
 /*Extra small devices (portrait phones, less than 576px)*/
 @media (min-width: 320px) { 
