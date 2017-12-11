@@ -28,6 +28,11 @@
 				
 			});
 		</script>
+		<script>
+			$scope.reduceNav=function(){
+				$mdMenu.hide(null, {closeAll:true});
+			};
+		</script>
 		<link rel="stylesheet" href="css/styles.css">
 		<script src="js/app.js"></script>
 		<script src="controllers/promotions.js"></script>
@@ -38,34 +43,33 @@
 		<div class="row">
 			<header>
 				<a ng-href="#"><img src="img/imatge_slider_vals.jpeg" class="img-responsive"></a>
-			<nav class="navbar navbar-default navGeneral">
-				<!-- <div class="navbar navbar-default navbar-fixed-top"> -->
-	  		<div class="container-fluid">
-		    	<div class="navbar-header">
-		      		<button type="button" class="navbar-toggle collapsed pull-left" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false" id="eraseBorderNavMobile">
-			        <span class="sr-only">Toggle navigation</span>
-			        <span class="icon-bar"></span>
-			        <span class="icon-bar"></span>
-			        <span class="icon-bar"></span>
-		    		</button>
-		    	</div>
-		    	<div class="collapse navbar-collapse navReduced" id="bs-example-navbar-collapse-1">
-		    		<ul class="nav navbar-nav col-xs-12 col-lg-12" id="navGlobal">
-
-					<li role="presentation" class="customNav reduceNav  col-lg-12" ng-repeat="filter in filters">
-						<a href="#/promotions/{{filter.idCategory}}" class="aUrlNav"><img ng-src="{{web}}/img/pictograms/{{filter.urlPictoNavVals}}" class="img-responsive col-lg-4 imgPictoNav">
-							{{filter.name}}
-						</a>
-					</li>
-					<li role="presentation" class="customNav reduceNav noBorder col-lg-12">
-						<a href="#/promotions/0" class="aUrlAll"><img ng-src="{{web}}/img/pictograms/pictoTOTSV.svg" class="img-responsive col-lg-4 imgAllNav"> 
-							Totes
-						</a>
-					</li>
-		      		</ul>    
-				</div>
-	   		</div>
-		</nav>
+					<nav class="navbar navbar-default navGeneral">
+						<!-- <div class="navbar navbar-default navbar-fixed-top"> -->
+			  		<div class="container-fluid">
+				    	<div class="navbar-header">
+				      		<button type="button" class="navbar-toggle collapsed pull-left" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false" id="eraseBorderNavMobile">
+					        <span class="sr-only">Toggle navigation</span>
+					        <span class="icon-bar"></span>
+					        <span class="icon-bar"></span>
+					        <span class="icon-bar"></span>
+				    		</button>
+				    	</div>
+				    	<div class="collapse navbar-collapse navReduced" id="bs-example-navbar-collapse-1">
+				    		<ul class="nav navbar-nav col-xs-12 col-lg-12 reduceNav" id="navGlobal">
+			    				<li role="presentation" class="customNav reduceNav  col-lg-12" ng-repeat="filter in filters">
+									<a href="#/promotions/{{filter.idCategory}}" class="aUrlNav"><img ng-src="{{web}}/img/pictograms/{{filter.urlPictoNavVals}}" class="img-responsive col-lg-4 imgPictoNav">
+										<span class="underline">{{filter.name}}</span>
+									</a>
+								</li>
+								<li role="presentation" class="customNav reduceNav noBorder col-lg-12">
+									<a href="#/promotions/0" class="aUrlAll"><img ng-src="{{web}}/img/pictograms/pictoTOTSV.svg" class="img-responsive col-lg-4 imgAllNav"> 
+										<span class="underline">Totes</span>
+									</a>
+								</li>
+				      		</ul>    
+						</div>
+			   		</div>
+				</nav>
 			</header>
 		</div>
 		<div class="row"> 

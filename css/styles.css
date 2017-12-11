@@ -60,6 +60,10 @@ body
     border-right: 1px dotted;
     border-color: #FCFFFF;
 }
+.underline:hover
+{
+    border-bottom: 1px solid white;
+}
 .customNav:hover
 {
     background-color: #25849e;
@@ -435,11 +439,6 @@ hr.style14
         margin-bottom: 5%;
         margin-top: 2%;
     }
-    .customNav
-    {
-        width: 19.2%!important;
-        border-right: none;
-    }
 }
 @media (min-width: 320px) and (max-width: 479px) {    
     .pictoImg
@@ -490,6 +489,11 @@ hr.style14
        .footerLogos
     {
         margin-top: 5%;
+    }
+      .customNav
+    {
+        width: 19.2%!important;
+        border-right: none;
     }
 }
 @media (min-width: 480px) and (max-width: 575px) {    
