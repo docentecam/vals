@@ -59,7 +59,7 @@
   </div>
 </div>
 <script>
-  var urlWebEix="http://ebesos.codigitals.com.es";
+  var urlWebEix="http://ebesos.codigitals.com.es/";
   //console.log();
   var customLabel = {};
   var totalShops = 0;
@@ -67,10 +67,6 @@
   function initMap()
   {
     //category = "serveis";
-    var map = new google.maps.Map(document.getElementById('map'), {
-      center: new google.maps.LatLng(41.416962, 2.214625),
-      zoom: 16
-    });
 
     var infoWindow = new google.maps.InfoWindow;
     // Change this depending on the name of your PHP or XML file
@@ -78,6 +74,11 @@
     downloadUrl('files/shop.xml', function(data) {
       var xml = data.responseXML;
       var markers = xml.documentElement.getElementsByTagName('marker');
+
+      var map = new google.maps.Map(document.getElementById('map'), {
+        center: new google.maps.LatLng(parseFloat(markers[0].getAttribute('lat')), parseFloat(markers[0].getAttribute('lng'))),
+        zoom: 16
+      });
       
       Array.prototype.forEach.call(markers, function(markerElem) {   
         //TODO eliminar
@@ -139,7 +140,7 @@
           {
             if(markerElem.getAttribute('nameAssociacio')=='Comerciants Xavier Nogués') marker.setIcon(new google.maps.MarkerImage(urlWebEix+'img/pictograms/aliXno.svg', null, null, null, new google.maps.Size(30, 30)));
 
-            else if(markerElem.getAttribute('nameAssociacio')=='AC019') marker.setIcon(new google.maps.MarkerImage('img/pictograms/ali019.svg', null, null, null, new google.maps.Size(30, 30)));
+            else if(markerElem.getAttribute('nameAssociacio')=='AC019') marker.setIcon(new google.maps.MarkerImage(urlWebEix+'img/pictograms/ali019.svg', null, null, null, new google.maps.Size(30, 30)));
 
             else if(markerElem.getAttribute('nameAssociacio')=='Mercat del Besòs') marker.setIcon(new google.maps.MarkerImage(urlWebEix+'img/pictograms/aliMer.svg', null, null, null, new google.maps.Size(30, 30)));
           }
