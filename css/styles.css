@@ -440,7 +440,11 @@ hr.style14
         margin-top: 2%;
     }
 }
-@media (min-width: 320px) and (max-width: 479px) {    
+@media (min-width: 320px) and (max-width: 479px) { 
+    .navbar .navbar-collapse
+    {
+      text-align: left; 
+    }  
     .pictoImg
     {
         margin-top: -0.5%;
@@ -492,7 +496,6 @@ hr.style14
     }
       .customNav
     {
-        width: 19.2%!important;
         border-right: none;
     }
 }
