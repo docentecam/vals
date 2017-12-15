@@ -644,6 +644,17 @@ hr.style14
         margin-left: 8.5%;
     }
 }
+    @media (min-width: 768px) and (max-width: 1024px)
+    {
+       .customNav
+    {
+        width: 19.2%!important;
+    padding: 0%;
+        border-right: none;
+        border-color: #FCFFFF;
+    }
+    }
+
 @media (min-width: 768px) and (max-width: 950px) {    
      .pictoImg
     {
@@ -668,13 +679,6 @@ hr.style14
         width: 55%;
         padding: 5%;
     }
-            .customNav
-{
-    width: 19.2%!important;
-    border-right: 1px dotted;
-    border-color: #FCFFFF;
-    padding: 0%;
-}
 .imgPictoNav
 {
     padding: 0%;
